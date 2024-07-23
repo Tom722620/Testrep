@@ -27,7 +27,7 @@ except subprocess.CalledProcessError as e:
 print("Создание файла test.txt с коммитами...")
 with open('test.txt', 'w') as file:
     current_date = datetime.now()
-    for i in range(1):
+    for i in range(250):
         new_date = current_date - timedelta(days=i)
         formatted_date = new_date.strftime('%c %z')  # Формат даты, который понимает Git
         file.write(formatted_date + '\n')
